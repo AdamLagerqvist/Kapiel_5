@@ -18,6 +18,7 @@ public class Random {
                 System.out.println("Gissa Lägre");
             }else if (Gissning >= 101){
                 System.out.println("Du börjar spelet genom att gissa på ett valfrit nummer mellan 1 och 100 genom att skriva det här.\nSedan kommer datorn säga om du bör gissa högre eller lägre, och du gör en ny gissning.\nFörsök få så låg poängen möjligt.\n\nLycka till!");
+                Gissningar--;
             }
         } while (R != Gissning);
         System.out.println("Du gissade rätt talet var " + R + " och det tog " + Gissningar + " antal gissningar!");
