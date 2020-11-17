@@ -5,13 +5,22 @@ import java.util.Scanner;
 public class Random {
     public static void main(String[] args) {
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\nväkommen till Adams gissnings spel för intruktioner skriv 101\n\n\n\n");
-        int R = (int) (Math.random()*100);
+        int R = (int) (Math.random()*100) + 1;
         Scanner tgb = new Scanner(System.in);
         int Gissning = 0;
         int Gissningar = 0;
+        boolean come_on_man = false;
         do {
             Gissningar++;
-            Gissning = Integer.parseInt(tgb.nextLine());
+            do {
+                come_on_man = false;
+                try {
+                    Gissning = Integer.parseInt(tgb.nextLine());
+                } catch (NumberFormatException e) {
+                    come_on_man = true;
+                    System.out.println("Skriv ett nummer din dumma jävel.");
+                }
+            } while (come_on_man);
             if (R > Gissning){
                 System.out.println("Gissa högre");
             }else if (R < Gissning && Gissning < 100){
