@@ -1,4 +1,4 @@
-package Kap5;
+package Rando_shit;
 
 import java.util.Scanner;
 
